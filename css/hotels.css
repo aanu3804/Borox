@@ -1,0 +1,309 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode (Default) */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Header */
+header {
+    background: #ff6f61;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    color: white;
+    font-size: 18px;
+}
+
+/* Dark Mode Header */
+body.dark-mode header {
+    background: #333;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* Dark Mode Navigation */
+body.dark-mode nav a {
+    color: #ff6f61;
+}
+
+nav a:hover {
+    color: #ffe6e2;
+}
+
+/* Dark Mode Nav Hover */
+body.dark-mode nav a:hover {
+    color: #ff9068;
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+}
+
+/* Dark Mode Button in Dark Theme */
+body.dark-mode #dark-mode-toggle {
+    color: #ff6f61;
+}
+
+/* Hero Section */
+.search-hotels {
+    text-align: center;
+    padding: 50px 0;
+    background: linear-gradient(to right, #ff6f61, #ff9068);
+    color: white;
+}
+
+/* Dark Mode Hero Section */
+body.dark-mode .search-hotels {
+    background: linear-gradient(to right, #333, #444);
+    color: #ff9068;
+}
+
+.search-hotels h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Inputs & Buttons */
+.search-hotels input,
+.search-hotels select,
+.search-hotels button {
+    padding: 12px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Dark Mode Input */
+body.dark-mode .search-hotels input,
+body.dark-mode .search-hotels select {
+    background: #333;
+    color: white;
+    border: 1px solid #ff9068;
+}
+
+.search-hotels input {
+    width: 40%;
+}
+
+.search-hotels select {
+    background: white;
+}
+
+.search-hotels button {
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Dark Mode Button */
+body.dark-mode .search-hotels button {
+    background: #ff6f61;
+    color: white;
+}
+
+.search-hotels button:hover {
+    background: #222;
+}
+
+/* Dark Mode Button Hover */
+body.dark-mode .search-hotels button:hover {
+    background: #e65b52;
+}
+
+/* Hotels List */
+.hotels-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.hotel-card {
+    background: white;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+/* Dark Mode Hotel Cards */
+body.dark-mode .hotel-card {
+    background: #222;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.hotel-card:hover {
+    transform: translateY(-10px);
+}
+.menu-popup {
+    display: none;
+    position: absolute; /* Changed from fixed to absolute */
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 250px;
+    text-align: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.menu-popup.show {
+    opacity: 1;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.more-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.more-button:hover {
+    background-color: #e04e2b;
+}
+
+.hotel-card img {
+    width: 100%;
+    height: 190px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.hotel-card h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Dark Mode Card Title */
+body.dark-mode .hotel-card h3 {
+    color: #ff9068;
+}
+
+.hotel-card p {
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Dark Mode Card Text */
+body.dark-mode .hotel-card p {
+    color: #ccc;
+}
+
+.hotel-card button {
+    background: #ff6f61;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hotel-card button:hover {
+    background: #e65b52;
+}
+
+/* Dark Mode Hotel Card Button */
+body.dark-mode .hotel-card button {
+    background: #ff9068;
+}
+
+/* Dark Mode Button Hover */
+body.dark-mode .hotel-card button:hover {
+    background: #e65b52;
+}
+#dark-mode-toggle {
+    background: white;
+    color: #ff4757;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-hotels input {
+        width: 80%;
+    }
+
+    .hotels-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}

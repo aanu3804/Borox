@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food - Borox</title>
+    <link rel="icon" type="image/png" href="assets/logo1.png">
+    <link rel="stylesheet" href="css/food.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+
+    <header>
+        <img src="assets/logo.png" alt="Borox Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="food.html">Food</a>
+            <a href="about.html">About Us</a>
+            <a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a>
+            <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+            <button id="dark-mode-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <section class="search-food">
+        <h1>Search Your Favorite Food</h1>
+        <input type="text" id="food-search" placeholder="Search food items...">
+        <button onclick="filterFood()">Search</button>
+    </section>
+
+    <section class="food-list">
+        <div class="food-card" data-category="burger">
+            <img src="assets/food1.jpg" alt="Food">
+            <h3>Cheese Burger</h3>
+            <p>$5.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="food-card" data-category="pizza">
+            <img src="assets/food2.jpg" alt="Food">
+            <h3>Pepperoni Pizza</h3>
+            <p>$8.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+</body>
+</html>

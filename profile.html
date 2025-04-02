@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Borox</title>
+    <link rel="icon" type="image/png" href="assets/logo1.png">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+
+    <header>
+        <img src="assets/logo.png" alt="Borox Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="food.html">Food</a>
+            <a href="about.html">About Us</a>
+            <a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a>
+            <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+            <button id="dark-mode-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <section class="profile">
+        <h1>Welcome, Anand</h1>
+        
+        <div class="profile-details">
+            <p><strong>Name:</strong> Anand </p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Age:</strong> 21</p>
+            <p><strong>Address:</strong> Flat no 123,Srinivas Colony,Mumbai-530074</p>
+            <p><strong>Email:</strong> anandsai2004@gmail.com</p>
+            <p><strong>Phone:</strong> +91 987654321</p>
+        </div>
+
+        <button id="edit-profile">Edit Details</button>
+        <button onclick="logout()">Logout</button>
+    </section>
+
+    <script>
+        function logout() {
+            alert("Logging out...");
+            window.location.href = "index.html";
+        }
+
+        document.getElementById("edit-profile").addEventListener("click", function() {
+            alert("Edit feature coming soon!");
+        });
+    </script>
+
+</body>
+</html>

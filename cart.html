@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Borox</title>
+    <link rel="icon" type="image/png" href="assets/logo1.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- JavaScript -->
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="assets/logo.png" alt="Borox Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="food.html">Food</a>
+            <a href="about.html">About Us</a>
+            <a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a>
+            <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+            <button id="dark-mode-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <div class="cart">
+        <h2>Your Cart</h2>
+
+        <!-- Cart Items -->
+        <div id="cart-items">
+            <div class="cart-item">
+                <img src="assets/food1.jpg" alt="Cheese Burger" width="100" height="100">
+                <h3>Upma</h3>
+                <p>Price: ₹199</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="assets/food2.jpg" alt="Pepperoni Pizza" width="100" height="100">
+                <h3>Samiya Upma</h3>
+                <p>Price: ₹299</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="assets/food3.jpg" alt="Chicken Biryani" width="100" height="100">
+                <h3>Normal Upma</h3>
+                <p>Price: ₹349</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+        </div>
+
+        <!-- Cart Total -->
+        <h3>Total: ₹<span id="cart-total">847</span></h3>
+        <button id="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+</body>
+</html>

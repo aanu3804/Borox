@@ -1,0 +1,232 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode (Default) */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #ddd;
+}
+
+/* Header */
+header {
+    background: #ff4757;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    color: white;
+    font-size: 18px;
+}
+
+body.dark-mode header {
+    background: #bb2d3b;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffe6e2;
+}
+
+/* Dark Mode Toggle Button */
+.toggle-mode {
+    background: white;
+    color: #ff4757;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.toggle-mode:hover {
+    background: #ffe6e2;
+}
+
+body.dark-mode .toggle-mode {
+    background: #444;
+    color: white;
+}
+
+/* Search Bar */
+.search-food {
+    text-align: center;
+    padding: 50px 0;
+    background: linear-gradient(to right, #ff4757, #ff6b81);
+    color: white;
+}
+
+body.dark-mode .search-food {
+    background: linear-gradient(to right, #bb2d3b, #d15c6a);
+}
+
+.search-food h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.search-food input,
+.search-food button {
+    padding: 12px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.search-food input {
+    width: 40%;
+}
+
+.search-food button {
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-food button:hover {
+    background: #222;
+}
+
+body.dark-mode .search-food button {
+    background: #ddd;
+    color: #333;
+}
+
+body.dark-mode .search-food button:hover {
+    background: #bbb;
+}
+
+/* Food List */
+.food-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.food-card {
+    background: white;
+    width: 280px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+body.dark-mode .food-card {
+    background: #2c2c2c;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+}
+
+.food-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.food-card h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+body.dark-mode .food-card h3 {
+    color: #ddd;
+}
+
+.food-card p {
+    color: #666;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+body.dark-mode .food-card p {
+    color: #aaa;
+}
+
+/* Buttons inside Food Cards */
+.food-card button {
+    background: #ff4757;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.food-card button:hover {
+    background: #e63946;
+}
+
+body.dark-mode .food-card button {
+    background: #d13b4a;
+}
+
+body.dark-mode .food-card button:hover {
+    background: #bb2d3b;
+}
+#dark-mode-toggle {
+    background: white;
+    color: #ff4757;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-food input {
+        width: 80%;
+    }
+
+    .food-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borox - Food Delivery</title>
+    <link rel="icon" type="image/png" href="assets/logo1.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="assets/logo.png" alt="Borox Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="food.html">Food</a>
+            <a href="about.html">About Us</a>
+            <a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a>
+            <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+            <button id="dark-mode-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Delicious Food, Delivered Fast!</h1>
+        <p>Order from your favorite restaurants now.</p>
+        <input type="text" id="search-bar" placeholder="Search for food or restaurants...">
+<button id="search-btn">🔍 Search</button>
+
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2>Popular Categories</h2>
+        <div class="category-list">
+            <div class="category">🍔 Burgers</div>
+            <div class="category">🍕 Pizza</div>
+            <div class="category">🍣 Sushi</div>
+            <div class="category">🥗 Healthy</div>
+            <div class="category">🌮 Tacos</div>
+        </div>
+        <div class="more-food">
+            <a href="food.html" class="more-btn">More Food</a>
+        </div>
+    </section>
+
+    <!-- Restaurants -->
+    <section class="restaurants">
+        <h2>Top Restaurants</h2>
+        <div class="restaurant-list">
+            <a href="hotels.html?restaurant=city-hearts" class="restaurant-card">
+                <img src="assets/restaurant1.jpg" alt="Restaurant">
+                <h3>City Hearts Food Point</h3>
+                <p>Biriyani, Naan</p>
+                <button>View Menu</button>
+            </a>
+            <a href="hotels.html?restaurant=sai-ram-parlour" class="restaurant-card">
+                <img src="assets/restaurant2.jpg" alt="Restaurant">
+                <h3>Sai Ram Parlour</h3>
+                <p>Tiffins and Meals</p>
+                <button>View Menu</button>
+            </a>
+            <a href="hotels.html?restaurant=best-western" class="restaurant-card">
+                <img src="assets/restaurant3.jpg" alt="Restaurant">
+                <h3>Best Western</h3>
+                <p>Japanese, Sushi</p>
+                <button>View Menu</button>
+            </a>
+        </div>
+    
+        <!-- More Restaurants Button -->
+        <div class="more-restaurants">
+            <a href="hotels.html" class="more-btn">More Restaurants</a>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Borox. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

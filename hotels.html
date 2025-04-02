@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels - Borox</title>
+    <link rel="icon" type="image/png" href="assets/logo1.png">
+    <link rel="stylesheet" href="css/hotels.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="assets/logo.png" alt="Borox Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="food.html">Food</a>
+            <a href="about.html">About Us</a>
+            <a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a>
+            <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+            <button id="dark-mode-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Search & Filters -->
+    <section class="search-hotels">
+        <h1>Find the Best Restaurants</h1>
+        <input type="text" id="hotel-search" placeholder="Search hotels...">
+        <select id="hotel-filter">
+            <option value="all">All</option>
+            <option value="top-rated">Top Rated</option>
+            <option value="fast-food">Fast Food</option>
+            <option value="italian">Italian</option>
+            <option value="chinese">Chinese</option>
+        </select>
+        <button onclick="filterHotels()">Search</button>
+    </section>
+
+    <!-- Hotel Listings -->
+    <section class="hotels-list">
+        <div class="hotel-card" data-category="fast-food">
+            <img src="assets/restaurant1.jpg" alt="Restaurant">
+            <h3>City Hearts Food Point</h3>
+            <p>Biriyani, Naan</p>
+            <button onclick="showMenu('city-hearts', event)">View Menu</button>
+        </div>
+        <div class="hotel-card" data-category="italian">
+            <img src="assets/restaurant2.jpg" alt="Restaurant">
+            <h3>Sai Ram Parlour</h3>
+            <p>Tiffins and Meals</p>
+            <button onclick="showMenu('sai-ram', event)">View Menu</button>
+        </div>
+        <div class="hotel-card" data-category="chinese">
+            <img src="assets/restaurant3.jpg" alt="Restaurant">
+            <h3>Best Western</h3>
+            <p>Japanese, Sushi</p>
+            <button onclick="showMenu('best-western', event)">View Menu</button>
+        </div>
+    </section>
+
+
+
+    <!-- Menu Popup (Initially Hidden) -->
+    <div id="menu-popup" class="menu-popup">
+        <div class="menu-content">
+            <span class="close" onclick="closeMenu()">&times;</span>
+            <h2 id="restaurant-name"></h2>
+            <ul id="menu-items"></ul>
+        </div>
+    </div>
+
+</body>
+</html>
