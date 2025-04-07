@@ -26,6 +26,37 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+function filterHotels() {
+    const searchInput = document.getElementById('hotel-search'); // fixed ID
+    if (!searchInput) {
+        console.error("Hotel search input not found!");
+        return;
+    }
+
+    const query = searchInput.value.toLowerCase();
+    const hotelCards = document.querySelectorAll('.hotel-card');
+
+    hotelCards.forEach(card => {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = name.includes(query) ? 'block' : 'none';
+    });
+}
+function filterFood() {
+    const searchInput = document.getElementById('food-search');
+    if (!searchInput) {
+        console.error("Food search input not found!");
+        return;
+    }
+
+    const query = searchInput.value.toLowerCase();
+    const foodCards = document.querySelectorAll('.food-card');
+
+    foodCards.forEach(card => {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = name.includes(query) ? 'block' : 'none';
+    });
+}
+
 
 // Search Functionality
 const searchBar = document.getElementById('search-bar');
