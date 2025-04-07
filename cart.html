@@ -38,32 +38,24 @@
 
         <!-- Cart Items -->
         <div id="cart-items">
-            <div class="cart-item">
-                <img src="assets/food1.jpg" alt="Cheese Burger" width="100" height="100">
-                <h3>Upma</h3>
-                <p>Price: ₹199</p>
-                <button class="remove-btn">Remove</button>
-            </div>
-
-            <div class="cart-item">
-                <img src="assets/food2.jpg" alt="Pepperoni Pizza" width="100" height="100">
-                <h3>Samiya Upma</h3>
-                <p>Price: ₹299</p>
-                <button class="remove-btn">Remove</button>
-            </div>
-
-            <div class="cart-item">
-                <img src="assets/food3.jpg" alt="Chicken Biryani" width="100" height="100">
-                <h3>Normal Upma</h3>
-                <p>Price: ₹349</p>
-                <button class="remove-btn">Remove</button>
-            </div>
+            <!-- Items will be loaded here dynamically -->
         </div>
 
         <!-- Cart Total -->
         <h3>Total: ₹<span id="cart-total">847</span></h3>
         <button id="checkout-btn">Proceed to Checkout</button>
     </div>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartUI();
+    
+            document.querySelectorAll('.remove-btn').forEach((btn, index) => {
+                btn.addEventListener('click', () => {
+                    removeFromCart(index);
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>
