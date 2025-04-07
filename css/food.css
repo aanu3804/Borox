@@ -154,10 +154,27 @@ body.dark-mode .food-card {
 .food-card:hover {
     transform: translateY(-10px);
 }
+.cart-popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-weight: bold;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.cart-popup.fade-out {
+    opacity: 0;
+}
 
 .food-card img {
     width: 100%;
-    height: 160px;
+    height: 120px;
     border-radius: 10px;
     margin-bottom: 15px;
 }
