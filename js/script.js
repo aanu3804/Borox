@@ -57,6 +57,11 @@ function filterFood() {
     });
 }
 
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartUI();
+}
 
 // Search Functionality
 const searchBar = document.getElementById('search-bar');
@@ -87,7 +92,23 @@ function addToCart(itemName, price) {
     cart.push({ name: itemName, price: price });
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartUI();
+    showCartPopup(itemName);
 }
+function showCartPopup(itemName) {
+    // Create popup element
+    const popup = document.createElement('div');
+    popup.className = 'cart-popup';
+    popup.innerHTML = `<p>✅ "${itemName}" added to cart!</p>`;
+
+    document.body.appendChild(popup);
+
+    // Fade out after 2 seconds
+    setTimeout(() => {
+        popup.classList.add('fade-out');
+        setTimeout(() => popup.remove(), 500);
+    }, 2000);
+}
+
 
 function updateCartUI() {
     const cartContainer = document.getElementById('cart-items');
@@ -121,7 +142,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', () => {
             alert("Thanks for purchasing! 🎉");
+            localStorage.removeItem('cart');
+            cart = [];
+            updateCartUI();
         });
+        
     }
 });
 
